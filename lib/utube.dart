@@ -29,6 +29,44 @@ class utube extends StatelessWidget{
       );
     }
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 15,
+        iconSize: 30,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white.withOpacity(1),
+        selectedFontSize: 14,
+        unselectedFontSize: 14,
+        onTap: (value) {
+          // Respond to item press.
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_filled, color: Colors.black54),
+            label: "Home"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.face_unlock_sharp, color: Colors.black54),
+              label: "Shorts"
+          ),
+
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outline_outlined, color: Colors.black54),
+              label: "H"
+          ),
+
+          BottomNavigationBarItem(
+              icon: Icon(Icons.subscriptions, color: Colors.black54),
+              label: "Subscriptions"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.video_library_outlined, color: Colors.black54),
+              label: "Library"
+          ),
+
+        ],
+      ),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
